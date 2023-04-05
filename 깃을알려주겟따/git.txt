@@ -1,0 +1,43 @@
+*VCS
+    시점 = Version 관리로 협업을 돕는 시스템.
+
+*SVN
+    서버 필수.
+    commit / checkout 만 됨.
+
+    Version Control / Rollback이 불가능함.
+     - 백업파일을 '항상' 만들어 두어야 한다.
+
+*Git
+    github : '개인'의 서버. 개인의 레포지토리는 '혼자' 사용하는 것이 일반적이다.
+    branch : '다른' 레포지토리로 취급된다.
+        Master에서만 Push/Pull 한다.
+        작업은 개인 branch에서 진행하며, '완성된' 코드만 Master에 담길 수 있도록 한다.
+
+        1 branch = new 개발자;
+--------------------------------------------------------------------[Server-Level]
+                  Organization[branches...]
+            <-> PR / Pull                <->
+        Repository[branches...]            Repository[branches...]
+      <-> Push / Pull                                     <->
+--------------------------------------------------------------------[Git-Level]
+*PC[branches...]                                         PC[branches...]
+
+    commit / staging(add) : 어떤 코드를 추가했을 때, 변경사항을 commit하게 된다.
+                            이때, commit의 대상을 정하는 것을 Staging이라고 한다.
+                            인덱스에 등록되었는지 아닌지의 여부 통해 파일을 구분한다.
+
+                            1 commit = new version;
+    
+    checkout : moves to certain Version(Branch).
+
+                            
+*프로젝트 시작 시 :
+
+    1. Org 생성
+    2. Clone(이전 commit기록을 가져옴).
+
+*Work-Tree :
+    refers to folder or directory.
+
+    
